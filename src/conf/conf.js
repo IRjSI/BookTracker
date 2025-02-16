@@ -5,9 +5,4 @@ const conf = {
     appwriteCollectionID : String(import.meta.env.VITE_APPWRITE_COLLECTION_ID),
 }
 
-// Validate URL format
-if (!conf.appwriteURL.startsWith('http://') && !conf.appwriteURL.startsWith('https://')) {
-    throw new Error('Invalid Appwrite URL format. URL must start with http:// or https://')
-}
-
 export default conf

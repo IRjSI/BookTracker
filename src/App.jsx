@@ -14,7 +14,6 @@ function App() {
   const { status, userData } = useSelector((state) => state.auth);
   const [isFormVisible, setIsFormVisible] = useState(false)
   const dispatch = useDispatch()
-  console.log('Appwrite URL:', import.meta.env.VITE_APPWRITE_URL);
 
   const toggleForm = () => {
     setIsFormVisible(!isFormVisible)
@@ -67,7 +66,7 @@ function App() {
         await appwriteService.updateNote(bookId, {chaptersCompleted: strCount})
         setBooks(books.map(book => book.$id === bookId ? {...book, chaptersCompleted: strCount} : book))
       } else {
-        alert('No more chapters to complete')
+        alert('No more chapters to decrease')
       }
     } catch (error) {
       console.log('Decrease Chapter error::',error);
@@ -104,8 +103,6 @@ function App() {
     fetchBooks();
   }, [setBooks])
   
-
-  console.log(books)
   return (
     <div className='bg-[#011627] min-h-screen text-center p-4'>
       <Header />
