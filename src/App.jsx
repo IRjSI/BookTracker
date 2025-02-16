@@ -14,6 +14,7 @@ function App() {
   const { status, userData } = useSelector((state) => state.auth);
   const [isFormVisible, setIsFormVisible] = useState(false)
   const dispatch = useDispatch()
+  console.log('Appwrite URL:', import.meta.env.VITE_APPWRITE_URL);
 
   const toggleForm = () => {
     setIsFormVisible(!isFormVisible)
