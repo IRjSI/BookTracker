@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import { login as authLogin } from './store/authSlice.js'
 import { useNavigate } from 'react-router-dom'
 import Header from './Header.jsx'
+import { Link } from 'react-router-dom'
 
 function Login() {
     const navigate = useNavigate();
@@ -28,7 +29,8 @@ function Login() {
         <Header />
         <div className='bg-[#011627] text-white flex items-center justify-center p-4'>
             <div className='bg-[#012b4d] p-8 rounded-lg border-l-4 border-[#0c54a7] max-w-md w-full'>
-                <h2 className='text-2xl font-bold mb-6'>Sign Up</h2>
+                <h2 className='text-2xl font-bold mb-6'>Sign Up</h2>    
+                <p>Already have an account? <Link to="/login" className='text-[#0c54a7] hover:text-[#0c54a7]/80 transition-colors'>Login</Link>    </p>
                 <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4'>
                     <input
                         className='p-3 rounded-md bg-[#011627] border border-[#0c54a7]/30 focus:outline-none focus:border-[#0c54a7] transition-colors'

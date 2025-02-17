@@ -13,12 +13,12 @@ function LandingPage() {
             Keep track of your reading progress, chapter by chapter. Never lose your place in any book again.
           </p>
           <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-[#012b4d] p-6 rounded-lg border-l-4 border-[#0c54a7]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 cursor-pointer">
+              <div className="bg-[#012b4d] hover:bg-[#012b4d]/80 p-6 rounded-lg border-l-4 border-[#0c54a7]">
                 <h3 className="text-xl font-semibold mb-2">Track Progress</h3>
                 <p className="text-gray-400">Monitor your reading progress chapter by chapter</p>
               </div>
-              <div className="bg-[#012b4d] p-6 rounded-lg border-l-4 border-[#0c54a7]">
+              <div className="bg-[#012b4d] hover:bg-[#012b4d]/80 p-6 rounded-lg border-l-4 border-[#0c54a7]">
                 <h3 className="text-xl font-semibold mb-2">Stay Organized</h3>
                 <p className="text-gray-400">Keep all your books organized in one place</p>
               </div>
