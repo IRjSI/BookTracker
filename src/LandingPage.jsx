@@ -6,6 +6,7 @@ function LandingPage() {
     <div>
       <div className="bg-[#011627] text-white flex flex-col items-center justify-center p-12">
         <div className="max-w-4xl text-center space-y-4">
+          <div className='bg-[#d8d8d8] w-[200px] h-[20px] md:w-[600px] md:h-[30px] lg:w-[900px] lg:h-[40px] opacity-80 md:opacity-50 lg:opacity-30 rounded-full absolute blur-3xl'></div>
           <h1 className="text-5xl font-bold mb-4">
             Track Your Reading Journey
           </h1>
