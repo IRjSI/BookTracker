@@ -30,6 +30,22 @@ export class Service{
         }
     }
 
+    async createNoteWishlist({slug, bookNameWishlist, userId}){
+        try {
+            return await this.databases.createDocument(
+                conf.appwriteDatabaseID,
+                conf.appwriteCollectionIDWishlist,
+                slug,
+                {
+                    bookNameWishlist,
+                    userId,
+                }
+            )
+        } catch (error) {
+            console.log("Appwrite serive :: createNoteWishlist :: error", error);
+        }
+    }
+
     async updateNote(slug,{chaptersCompleted, userId}){
         try {
             return await this.databases.updateDocument(
@@ -84,6 +100,19 @@ export class Service{
             )
         } catch (error) {
             console.log("Appwrite serive :: getPosts :: error", error);
+            return false
+        }
+    }
+
+    async getNotesWishlist(queries = []){
+        try {
+            return await this.databases.listDocuments(
+                conf.appwriteDatabaseID,
+                conf.appwriteCollectionIDWishlist,
+                queries,
+            )
+        } catch (error) {
+            console.log("Appwrite serive :: getNotesWishlist :: error", error);
             return false
         }
     }
